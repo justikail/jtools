@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 async function getData(courier, trackId) {
-  const response = await fetch(`https://api.binderbyte.com/v1/track?api_key=f0bd37a008e9686ac642aaa1929ecfbf73bd9f9bc6db5d12a78e105fecc773a6&courier=${courier}&awb=${trackId}`);
+  const response = await fetch(`https://api.binderbyte.com/v1/track?api_key=${process.env.NEXT_PUBLIC_APIKEY_EXTERNAL2}&courier=${courier}&awb=${trackId}`);
   const data = await response.json();
   if (response.ok) {
     return data.data;

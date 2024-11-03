@@ -27,7 +27,7 @@ export async function POST(request) {
   }
 
   try {
-    const response = await fetch(`https://pitucode.com/downloader/bni/7?apikey=wanzet&rek=${norek}&saldo=${saldo}`);
+    const response = await fetch(`https://pitucode.com/downloader/bni/7?apikey=${process.env.NEXT_PUBLIC_APIKEY_EXTERNAL1}&rek=${norek}&saldo=${saldo}`);
     const data = await response.json();
 
     if (response.ok && data.result?.url) {

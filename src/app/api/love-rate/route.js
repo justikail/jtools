@@ -79,13 +79,6 @@ export async function POST(request) {
 
   finalScore = Math.min(Math.round((numerologiScore + lengthScore + commonSentenceScore + name1DominantScore + commonLetterScore + commonChar + firstLastLetterScore) / 5), 96);
 
-  if (name1 == "Haikal Siregar" && name2 == "Yorushika Songs") {
-    finalScore = 100;
-  }
-  if (name1 == "Denny" && name2 == "Yusril") {
-    finalScore = 100;
-  }
-
   return NextResponse.json(
     {
       success: true,

@@ -66,6 +66,11 @@ function Sidebar() {
                 <Uil.UilClipboard size="18px" color="#fff" /> Pastein
               </Link>
             </li>
+            <li className="flex justify-start bg-base-300 rounded-lg">
+              <Link href="/store">
+                <Uil.UilStore size="18px" color="#fff" /> Store
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

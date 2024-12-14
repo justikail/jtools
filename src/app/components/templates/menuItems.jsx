@@ -83,12 +83,6 @@ const menuItems = [
       { href: "/word/parafrase", label: "Parafrase AI" },
     ],
   },
-  {
-    name: "Download Tools",
-    icon: Uil.UilImport,
-    key: "download",
-    links: [{ href: "/download/tiktok", label: "TikTok Downloader" }],
-  },
 ];
 
 export default menuItems;

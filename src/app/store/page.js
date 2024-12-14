@@ -38,7 +38,7 @@ export default function Store() {
                 <Image src="https://assets.vercel.com/image/upload/v1649775681/docs-assets/static/guides/images/Dark.png" alt="Shoes" fill style={{ objectFit: "cover" }} priority={false} className="rounded-2xl" />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">{item.name}</h2>
+                <h2 className="card-title underline">{item.name}</h2>
                 <p className="text-sm">{item.description}</p>
                 <div className="card-actions justify-end pt-2">
                   <a

@@ -71,6 +71,9 @@ export default function RootLayout({ children }) {
             <Link href="/about" className="link link-hover footer-title text-lg hover:text-white">
               About
             </Link>
+            <Link href="/store" className="link link-hover footer-title text-lg hover:text-white">
+              Store
+            </Link>
           </nav>
         </footer>
         <div className="divider my-0"></div>

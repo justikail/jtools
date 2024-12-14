@@ -8,6 +8,9 @@ const nextConfig = {
       {
         hostname: "anime.kirwako.com",
       },
+      {
+        hostname: "img.daisyui.com",
+      },
     ],
   },
   async rewrites() {

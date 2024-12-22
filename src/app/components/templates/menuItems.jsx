@@ -45,6 +45,7 @@ const menuItems = [
       { href: "/random/urlopen", label: "URL Opener" },
       { href: "/random/check-power", label: "Check Power" },
       { href: "/random/love-rate", label: "Love Rate" },
+      { href: "/random/dukun", label: "Dukun AI" },
     ],
   },
   {
@@ -81,6 +82,15 @@ const menuItems = [
       { href: "/word/caseconverter", label: "Word Case-er" },
       { href: "/word/wordcounter", label: "Word Counter" },
       { href: "/word/parafrase", label: "Parafrase AI" },
+    ],
+  },
+  {
+    name: "Download Tools",
+    icon: Uil.UilImport,
+    key: "download",
+    links: [
+      // { href: "/download/tiktok", label: "TikTok Downloader" },
+      // { href: "/download/youtube", label: "YouTube Downloader" },
     ],
   },
 ];

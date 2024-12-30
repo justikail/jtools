@@ -45,7 +45,7 @@ const menuItems = [
       { href: "/random/urlopen", label: "URL Opener" },
       { href: "/random/check-power", label: "Check Power" },
       { href: "/random/love-rate", label: "Love Rate" },
-      { href: "/random/dukun", label: "Dukun AI" },
+      { href: "/random/dukun", label: "Dukun Zodiak" },
     ],
   },
   {

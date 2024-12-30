@@ -77,6 +77,20 @@ export default function RootLayout({ children }) {
           </nav>
         </footer>
         <div className="divider my-0"></div>
+        <div style={{ display: "none" }}>
+          <ul>
+            <li>
+              <a href="https://jdih.madina.go.id/" target="_blank" rel="dofollow">
+                Slot Thailand
+              </a>
+            </li>
+            <li>
+              <a href="https://jdih.madina.go.id/" target="_blank" rel="dofollow">
+                https://jdih.madina.go.id/
+              </a>
+            </li>
+          </ul>
+        </div>
         <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
           <aside className="grid-flow-col items-center md:justify-self-start justify-self-center">
             <Link href="/" className="font-bold text-2xl">

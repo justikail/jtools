@@ -2,8 +2,8 @@ import * as Uil from "@iconscout/react-unicons";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import BtnMenu from "@/components/button/btnMenu";
-import MenuItems from "./menuItems";
 import SearchModal from "../modal/searchModal";
+import menuItems from "./menuItems";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState({});
@@ -49,7 +49,7 @@ function Sidebar() {
           </button>
           <div className="divider my-0">LIST TOOLS</div>
           <ul className="flex flex-col gap-2">
-            {MenuItems.map((menu, index) => (
+            {menuItems.map((menu, index) => (
               <BtnMenu key={index} icon={menu.icon} condition={() => toggleItem(menu.key)} item={isOpen[menu.key]} menuName={menu.name}>
                 {menu.links.map((link, index) => (
                   <li className="transition-colors" key={index}>

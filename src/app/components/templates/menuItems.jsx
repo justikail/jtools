@@ -89,8 +89,8 @@ const menuItems = [
     icon: Uil.UilImport,
     key: "download",
     links: [
-      // { href: "/download/tiktok", label: "TikTok Downloader" },
-      // { href: "/download/youtube", label: "YouTube Downloader" },
+      { href: "/download/tiktok", label: "TikTok Downloader" },
+      { href: "/download/igreel", label: "Instagram Reel" },
     ],
   },
 ];

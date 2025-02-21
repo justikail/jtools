@@ -22,6 +22,7 @@ const menuItems = [
       { href: "/programmer/phobfus", label: "PHP Obfuscator" },
       { href: "/programmer/htmlesc", label: "HTML Escaper" },
       { href: "/programmer/bladeformat", label: "Blade Formatter" },
+      { href: "/programmer/encryptor", label: "Encryptor" },
     ],
   },
   {

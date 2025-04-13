@@ -2,10 +2,9 @@ import * as Uil from "@iconscout/react-unicons";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import BtnMenu from "@/components/button/btnMenu";
-import SearchModal from "../modal/searchModal";
-import menuItems from "./menuItems";
+import SearchModal from "@/components/modal/searchModal";
 
-function Sidebar() {
+function Sidebar({ menuItems }) {
   const [isOpen, setIsOpen] = useState({});
   const [showModal, setShowModal] = useState(false);
 
@@ -74,7 +73,7 @@ function Sidebar() {
           </ul>
         </div>
       </div>
-      {showModal && <SearchModal setShowModal={setShowModal} />}
+      {showModal && <SearchModal setShowModal={setShowModal} menuItems={menuItems} />}
     </>
   );
 }

@@ -1,65 +1,14 @@
 import * as Uil from "@iconscout/react-unicons";
 import Sidebar from "@/components/templates/sidebar";
+import formatToolsToMenuItems from "./menuItems";
 
-// export async function getServerSideProps() {
-//   const iconsMap = {
-//     exploit: "Uil.UilWrench",
-//     programmer: "Uil.UilBracketsCurly",
-//     lookup: "Uil.UilSearch",
-//     image: "Uil.UilCamera",
-//     random: "Uil.UilPuzzlePiece",
-//     checker: "Uil.UilCheck",
-//     generator: "Uil.UilProcess",
-//     word: "Uil.UilPen",
-//     download: "Uil.UilImport",
-//   };
+export default async function Drawer({ time }) {
+  const res = await fetch(`/api/tools`, {
+    next: { revalidate: 60 },
+  });
+  const data = await res.json();
+  const menuItems = formatToolsToMenuItems(data);
 
-//   try {
-//     const response = await fetch("https://jtools.my.id/api/tools");
-//     if (!response.ok) {
-//       throw new Error("Failed to fetch tools");
-//     }
-//     const { success, data } = await response.json();
-
-//     if (!success) {
-//       throw new Error("Failed to fetch tools");
-//     }
-
-//     const activeTools = data.filter((tool) => tool.isActive);
-//     const categorizedTools = activeTools.reduce((acc, tool) => {
-//       const category = tool.link.split("/")[1];
-//       if (!acc[category]) {
-//         acc[category] = {
-//           name: `${category.charAt(0).toUpperCase()}${category.slice(1)} Tools`,
-//           icon: iconsMap[category] || Uil.UilQuestion,
-//           key: category,
-//           links: [],
-//         };
-//       }
-//       acc[category].links.push({
-//         href: tool.link,
-//         label: tool.name,
-//       });
-//       return acc;
-//     }, {});
-
-//     const menuItems = Object.values(categorizedTools);
-//     return {
-//       props: {
-//         tools: menuItems,
-//       },
-//     };
-//   } catch (error) {
-//     console.error("Error fetching tools:", error);
-//     return {
-//       props: {
-//         tools: [],
-//       },
-//     };
-//   }
-// }
-
-function Drawer({ time }) {
   return (
     <div className="drawer max-w-max">
       <input id="toggle" type="checkbox" className="drawer-toggle" />
@@ -69,9 +18,7 @@ function Drawer({ time }) {
           {time.split(", ")[0]}
         </label>
       </div>
-      <Sidebar />
+      <Sidebar menuItems={menuItems} />
     </div>
   );
 }
-
-export default Drawer;

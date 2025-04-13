@@ -1,8 +1,7 @@
-import menuItems from "../templates/menuItems";
 import Link from "next/link";
 import { useState } from "react";
 
-function SearchModal({ setShowModal }) {
+function SearchModal({ setShowModal, menuItems }) {
   const [query, setQuery] = useState("");
 
   const allLinks = menuItems.flatMap((category) => category.links);

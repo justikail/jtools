@@ -24,11 +24,15 @@ export function VisitorProvider({ children }) {
           body: JSON.stringify({ ip, isOnline: true }),
         });
 
-        const visitorResponse = await fetch("/api/visitors");
+        const visitorResponse = await fetch("/api/visitors", {
+          next: { revalidate: 60 },
+        });
         const visitorData = await visitorResponse.json();
         setVisitorCount(visitorData.totalData);
 
-        const onlineResponse = await fetch("/api/online");
+        const onlineResponse = await fetch("/api/online", {
+          next: { revalidate: 60 },
+        });
         const onlineData = await onlineResponse.json();
         setOnlineCount(onlineData.totalData);
 

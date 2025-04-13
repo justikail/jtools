@@ -3,7 +3,7 @@ import Sidebar from "@/components/templates/sidebar";
 import formatToolsToMenuItems from "./menuItems";
 
 export default async function Drawer({ time }) {
-  const res = await fetch(`/api/tools`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_PRIMARY_URL}/api/tools`, {
     next: { revalidate: 60 },
   });
   const data = await res.json();

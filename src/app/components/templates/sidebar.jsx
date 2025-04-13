@@ -58,7 +58,7 @@ function Sidebar({ menuItems }) {
               </BtnMenu>
             ))}
           </ul>
-          <div className="divider my-0">OTHER TOOLS</div>
+          <div className="divider my-0">OTHER</div>
           <ul className="flex flex-col gap-2">
             <li className="flex justify-start bg-base-300 rounded-lg">
               <Link href="//pastein.vercel.app/">

@@ -1,13 +1,13 @@
 import * as Uil from "@iconscout/react-unicons";
 import Sidebar from "@/components/templates/sidebar";
-import formatToolsToMenuItems from "./menuItems";
+// import formatToolsToMenuItems from "./menuItems";
 
 export default async function Drawer({ time }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_PRIMARY_URL}/api/tools`, {
-    next: { revalidate: 60 },
-  });
-  const data = await res.json();
-  const menuItems = formatToolsToMenuItems(data);
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_LOCAL_URL}/api/tools`, {
+  //   next: { revalidate: 60 },
+  // });
+  // const data = await res.json();
+  // const menuItems = formatToolsToMenuItems(data);
 
   return (
     <div className="drawer max-w-max">
@@ -18,7 +18,7 @@ export default async function Drawer({ time }) {
           {time.split(", ")[0]}
         </label>
       </div>
-      <Sidebar menuItems={menuItems} />
+      <Sidebar />
     </div>
   );
 }

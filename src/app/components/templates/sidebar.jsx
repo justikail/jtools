@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import BtnMenu from "@/components/button/btnMenu";
 import SearchModal from "@/components/modal/searchModal";
+import menuItems from "./menuItems";
 
-function Sidebar({ menuItems }) {
+function Sidebar() {
   const [isOpen, setIsOpen] = useState({});
   const [showModal, setShowModal] = useState(false);
 
